@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as faceapi from 'face-api.js';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { RotatingLines } from 'react-loader-spinner';
+// import { RotatingLines } from 'react-loader-spinner';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 const DQuestions = () => {
@@ -596,15 +596,7 @@ const storeResult = ()=>{
   >
     {showSpinner && (
       <>
-        <RotatingLines
-          visible={true}
-          height="80"
-          width="80"
-          color="#1c3681"
-          strokeWidth="5"
-          animationDuration="0.75"
-          ariaLabel="loading"
-        />
+       
         <div style={{ marginTop: '20px', fontWeight: 'bold', color: '#1c3681' }}>
         Evaluating your results
         </div>
