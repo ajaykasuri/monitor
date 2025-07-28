@@ -1,7 +1,7 @@
 import './App.css';
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Navigate, Routes } from 'react-router-dom';
+import { HashRouter, Route, Navigate, Routes } from 'react-router-dom';
 import Login from './login';
 import FirstPage from './Admin/Firstpage';
 import ATimeSlot from './Admin/ATimeslot';
@@ -15,7 +15,7 @@ import StudentDashBoard from './Student/StudentDashBoard';
 
 function App() {
   return (
-    <BrowserRouter basename='monitor'>
+    <HashRouter basename='monitor'>
       <Routes>
         <Route path='/' element={<Login />} />
         {/* <Route path='/' element={<Spinner />} /> */}
@@ -36,7 +36,7 @@ function App() {
 
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
