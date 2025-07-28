@@ -15,7 +15,7 @@ import StudentDashBoard from './Student/StudentDashBoard';
 
 function App() {
   return (
-    <HashRouter basename='monitor'>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Login />} />
         {/* <Route path='/' element={<Spinner />} /> */}

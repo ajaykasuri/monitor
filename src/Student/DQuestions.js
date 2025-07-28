@@ -8,6 +8,8 @@ const DQuestions = () => {
 
   const userDetails = location.state;
 
+  const MODEL_URL = `${process.env.PUBLIC_URL}/models`;
+
   const navigate = useNavigate();
   const [isTabActive,setIsTabActive] = useState(true);
   const [quizQuestions, setQuizQuestions] = useState([]);
@@ -65,8 +67,16 @@ useEffect(() => {
   useEffect(() => {
     const loadModels = async () => {
       try {
-        await faceapi.nets.ssdMobilenetv1.loadFromUri('/models/ssd_mobilenetv1');
-        await faceapi.nets.faceLandmark68Net.loadFromUri('/models/face_landmark_68');
+        // await faceapi.nets.ssdMobilenetv1.loadFromUri('/models/ssd_mobilenetv1');
+        // await faceapi.nets.faceLandmark68Net.loadFromUri('/models/face_landmark_68');
+
+        const MODEL_URL = `${process.env.PUBLIC_URL}/models`;
+
+await faceapi.nets.ssdMobilenetv1.loadFromUri(`${MODEL_URL}/ssd_mobilenetv1`);
+await faceapi.nets.faceLandmark68Net.loadFromUri(`${MODEL_URL}/face_landmark_68`);
+await faceapi.nets.faceRecognitionNet.loadFromUri(`${MODEL_URL}/face_recognition`);
+// Add more models similarly if needed
+
         // console.log("Face-api models loaded");
       } catch (err) {
         console.error("Error loading face-api models:", err);
