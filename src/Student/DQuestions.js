@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as faceapi from 'face-api.js';
 import { useLocation, useNavigate } from 'react-router-dom';
-// import { RotatingLines } from 'react-loader-spinner';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 const DQuestions = () => {
