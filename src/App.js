@@ -11,11 +11,11 @@ import Questions from './Admin/Questions';
 import DQuestions from './Student/DQuestions';
 import AdminDashboard from './Admin/AdminDashboard';
 import StudentDashBoard from './Student/StudentDashBoard';
-import Spinner from './Student/Spinner';
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='monitor'>
       <Routes>
         <Route path='/' element={<Login />} />
         {/* <Route path='/' element={<Spinner />} /> */}
